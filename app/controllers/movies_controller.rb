@@ -5,4 +5,10 @@ class MoviesController < ApplicationController
     render json: movies
   end
 
+  def create
+    # Movi instead of Movie
+    movie = Movie.create(movie_params)
+    render json: movie
+  end
+
 end
